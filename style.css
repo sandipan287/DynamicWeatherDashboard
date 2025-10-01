@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  text-align: center;
+  background-image: url(https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?cs=srgb&dl=pexels-fotios-photos-1107717.jpg&fm=jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+}
+
+/* Dashboard Layout */
+.dashboard {
+  max-width: 1200px; /* 🔹 increased for more breathing room */
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+  align-items: start; /* 🔹 ensures cards align at top */
+}
+
+.card {
+  background: #2f2f2f;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.1);
+  opacity: 0.95;
+  width: 100%;          /* 🔹 card stretches with grid */
+  height: auto;         /* 🔹 adjusts to content */
+  max-height: none;     /* 🔹 allow growth */
+  overflow-y: auto;     /* 🔹 adds scrollbar if too tall */
+  box-sizing: border-box;
+}
+
+.big-time {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.weather-icon {
+  width: 80px;
+}
+
+.weather-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.forecast-grid, .hourly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.forecast-item, .hourly-item {
+  background: rgba(255,255,255,0.08);
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#forecast, #hourly {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.toggle-btn {
+  margin-top: 10px;
+  background: #4caf50;
+}
