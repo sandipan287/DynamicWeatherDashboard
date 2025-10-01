@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌤 Dynamic Weather Dashboard</h1>
+
+  <div class="input-group">
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Get Weather</button>
+  </div>
+
+  <div class="dashboard">
+    <!-- Left Side: Current Weather -->
+    <div class="card">
+      <h2 id="city-name">--</h2>
+      <div class="big-time" id="current-time">--:--</div>
+      <div class="sub-text" id="current-date">--</div>
+
+      <div id="weather">
+        <img class="weather-icon" src="" id="weather-icon">
+        <h3 id="temperature">-- °C</h3>
+        <p id="condition">--</p>
+      </div>
+
+      <div class="weather-stats">
+        <div>
+          <p>🌡 Feels Like: <span id="feels-like">--</span></p>
+          <p>💧 Humidity: <span id="humidity">--</span>%</p>
+        </div>
+        <div>
+          <p>💨 Wind: <span id="wind">--</span> m/s</p>
+          <p>⚡ Pressure: <span id="pressure">--</span> hPa</p>
+        </div>
+      </div>
+
+      <div class="weather-stats">
+        <p>🌅 Sunrise: <span id="sunrise">--</span></p>
+        <p>🌇 Sunset: <span id="sunset">--</span></p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleTemperature()">Show in °F</button>
+    </div>
+
+    <!-- Right Side: Forecasts -->
+    <div>
+      <!-- 5 Day Forecast -->
+      <div class="card">
+        <h2>5-Day Forecast</h2>
+        <div id="forecast" class="forecast-grid"></div>
+      </div>
+
+      <!-- Hourly Forecast -->
+      <div class="card" style="margin-top:20px;">
+        <h2>Hourly Forecast</h2>
+        <div id="hourly" class="hourly-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
