@@ -48,12 +48,12 @@ button:hover {
 
 /* Dashboard Layout */
 .dashboard {
-  max-width: 1200px; /* 🔹 increased for more breathing room */
+  max-width: 1200px; 
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 20px;
-  align-items: start; /* 🔹 ensures cards align at top */
+  align-items: start;
 }
 
 .card {
@@ -62,10 +62,10 @@ button:hover {
   padding: 20px;
   box-shadow: 6px 6px 12px rgba(0,0,0,0.1);
   opacity: 0.95;
-  width: 100%;          /* 🔹 card stretches with grid */
-  height: auto;         /* 🔹 adjusts to content */
-  max-height: none;     /* 🔹 allow growth */
-  overflow-y: auto;     /* 🔹 adds scrollbar if too tall */
+  width: 100%;          
+  height: auto;         
+  max-height: none;     
+  overflow-y: auto;     
   box-sizing: border-box;
 }
 
